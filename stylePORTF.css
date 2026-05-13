@@ -1,0 +1,210 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: #4a4a4a;
+    background-color: #fafafa;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Навигация */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff9a9e;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9a9e;
+}
+
+/* Hero Секция */
+.hero {
+    height: 80vh;
+    background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: white;
+    color: #ff9a9e;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s transform;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Сетка Портфолио */
+.portfolio {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.portfolio h2 {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card h3 {
+    margin: 20px 0 10px;
+}
+
+.card p {
+    margin-bottom: 20px;
+    color: #888;
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    background: #f1f1f1;
+    font-size: 0.9rem;
+}
+/* Секция "О себе" */
+.about-section {
+    padding: 80px 10%;
+    background-color: #ffffff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 30px; /* Скругленные углы в стиле SU */
+    box-shadow: 20px 20px 0px #ffd1ff; /* Декоративная тень-подложка */
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff9a9e;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.philosophy {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.philosophy span {
+    background: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #777;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-image img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .philosophy {
+        justify-content: center;
+    }
+}
