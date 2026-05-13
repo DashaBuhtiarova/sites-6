@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store — Коричнево-белый стиль</title>
+    <link rel="stylesheet" href="styleBOOK.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="top-bar">
+                <div class="logo">BOOKS <span>STORE</span></div>
+                <div class="user-menu">
+                    <span>Добро пожаловать, Адам!</span>
+                    <a href="#">Ваш аккаунт</a>
+                    <a href="#" class="cart-btn">Корзина: (пусто)</a>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">ГЛАВНАЯ</a></li>
+                    <li><a href="#">АКЦИИ</a></li>
+                    <li><a href="#">КАРТА САЙТА</a></li>
+                    <li><a href="#">КОНТАКТЫ</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-section">
+                <input type="text" placeholder="Введите ключевые слова...">
+                <button>ПОИСК</button>
+            </div>
+        </header>
+
+        <main class="content">
+            <aside class="sidebar">
+                <section class="widget">
+                    <h3>КАТЕГОРИИ</h3>
+                    <ul>
+                        <li><a href="#">Искусство и Фото</a></li>
+                        <li><a href="#">Аудиокниги</a></li>
+                        <li><a href="#">Бизнес и Инвестиции</a></li>
+                        <li><a href="#">Детские книги</a></li>
+                        <li><a href="#">Компьютеры и Интернет</a></li>
+                        <li><a href="#">Кулинария</a></li>
+                    </ul>
+                </section>
+
+                <section class="widget cart-widget">
+                    <h3>МОЯ КОРЗИНА</h3>
+                    <p>Нет товаров</p>
+                    <button class="checkout-btn">ОФОРМИТЬ</button>
+                </section>
+            </aside>
+
+            <section class="product-grid">
+                <div class="book-card">
+                    <div class="book-image">
+                     <!-- src: путь к картинке, alt: описание для поиска -->
+                        <img src="book1.jpg" alt="Обложка книги Unbroken">
+                    </div>
+                    <h4>Война и мир</h4>
+                    <p class="price">25.89 $</p>
+                     <button class="add-to-cart">В корзину</button>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-image">
+                     <!-- src: путь к картинке, alt: описание для поиска -->
+                        <img src="book2.jpg" alt="Обложка книги Unbroken">
+                    </div>
+                    <h4>1984</h4>
+                    <p class="price">20.99 $</p>
+                     <button class="add-to-cart">В корзину</button>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-image">
+                     <!-- src: путь к картинке, alt: описание для поиска -->
+                        <img src="book3.jpg" alt="Обложка книги Unbroken">
+                    </div>
+                    <h4>Убийство на поле для гольфа</h4>
+                    <p class="price">15.49 $</p>
+                     <button class="add-to-cart">В корзину</button>
+                </div>
+                <div class="book-card">
+                    <div class="book-image">
+                     <!-- src: путь к картинке, alt: описание для поиска -->
+                        <img src="book4.jpg" alt="Обложка книги Unbroken">
+                    </div>
+                    <h4>Прислуга</h4>
+                    <p class="price">17.89 $</p>
+                     <button class="add-to-cart">В корзину</button>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-image">
+                     <!-- src: путь к картинке, alt: описание для поиска -->
+                        <img src="book5.jpg" alt="Обложка книги Unbroken">
+                    </div>
+                    <h4>Мередит. Тайны Лунного зала</h4>
+                    <p class="price">10.99 $</p>
+                     <button class="add-to-cart">В корзину</button>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-image">
+                     <!-- src: путь к картинке, alt: описание для поиска -->
+                        <img src="book6.jpg" alt="Обложка книги Unbroken">
+                    </div>
+                    <h4>Твоё сердце будет разбито</h4>
+                    <p class="price">25.89 $</p>
+                     <button class="add-to-cart">В корзину</button>
+                </div>
+                </section>
+        </main>
+    </div>
+    <footer class="site-footer">
+    <div class="footer-columns">
+        <div class="footer-column">
+            <h3>ИНФОРМАЦИЯ</h3>
+            <ul>
+                <li><a href="#">Связаться с нами</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Правовая информация</a></li>
+                <li><a href="#">Условия использования</a></li>
+                <li><a href="#">О нас</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>НАШИ ПРЕДЛОЖЕНИЯ</h3>
+            <ul>
+                <li><a href="#">Новинки</a></li>
+                <li><a href="#">Хиты продаж</a></li>
+                <li><a href="#">Спецпредложения</a></li>
+                <li><a href="#">Производители</a></li>
+                <li><a href="#">Поставщики</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>ВАШ АККАУНТ</h3>
+            <ul>
+                <li><a href="#">Профиль</a></li>
+                <li><a href="#">Личные данные</a></li>
+                <li><a href="#">Адреса</a></li>
+                <li><a href="#">Скидки</a></li>
+                <li><a href="#">История заказов</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Работает на PrestaShop™. Все права защищены.</p>
+    </div>
+</footer>
+</body>
+</html>
