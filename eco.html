@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoNews Kazakhstan</title>
+    <link rel="stylesheet" href="styleECO.css" media="screen">
+</head>
+<body>
+
+<header>
+    <div class="logo">EcoNews.KZ</div>
+    <nav><a href="#">Главная</a> | <a href="#">Регионы</a> | <a href="#">Инициативы</a> | <a href="#">О нас</a></nav>
+</header>
+
+<section class="hero">
+    <h1>Природа Казахстана — наше будущее</h1>
+    <p>Главные новости экологии и устойчивого развития</p>
+</section>
+
+<div class="container">
+    <!-- Новость 1 -->
+    <div class="news-card">
+        <div class="news-content">
+            <span class="category">Водные ресурсы</span>
+            <div><img src="полив.png" style="width: 512px;height: 279px;"></div>
+            <h3>Лимиты на полив: юг переходит на эко-технологии</h3>
+            <p>В Туркестанской и Кызылординской областях ввели строгий контроль за использованием воды для полива риса и хлопка...</p>
+        </div>
+    </div>
+
+    <!-- Новость 2 -->
+    <div class="news-card">
+        <div class="news-content">
+            <span class="category">Законодательство</span>
+            <div><img src="zapret.jpg" style="width: 512px;height: 279px;"></div>
+            <h3>Запрет на ввоз радиоактивных отходов</h3>
+            <p>Мажилис одобрил исторический законопроект, защищающий экологический суверенитет страны...</p>
+        </div>
+    </div>
+
+    <!-- Новость 3 -->
+    <div class="news-card">
+        <div class="news-content">
+            <span class="category">Экотуризм</span>
+            <div><img src="parks.jpg" style="width: 512px;height: 279px;"></div>
+            <h3>16 миллиардов на национальные парки</h3>
+            <p>Новые тропы, современные визит-центры и раздельный сбор мусора появятся в Чарынском каньоне и Көлсай көлдері.</p>
+        </div>
+    </div>
+</div>
+    <!-- Секция с Интерактивом -->
+<section class="interactive-section">
+    
+    <!-- 1. Мониторинг воздуха -->
+    <div class="air-quality-card">
+        <h3>📍 Мониторинг воздуха в реальном времени</h3>
+        <p>Нажмите на город, чтобы увидеть индекс AQI (2026)</p>
+        <div class="map-container">
+            <!-- Упрощенная SVG карта Казахстана -->
+            <svg viewBox="0 0 800 400" class="kz-map">
+                <!-- Фон карты (условный) -->
+                <path d="M50,200 L150,100 L400,80 L700,120 L750,300 L500,380 L100,350 Z" fill="#e0e0e0" />
+                
+                <!-- Точки городов -->
+                <circle cx="200" cy="300" r="10" class="city-point good" data-city="Алматы" data-aqi="42" />
+                <text x="180" y="325" font-size="12">Алматы</text>
+
+                <circle cx="450" cy="150" r="10" class="city-point warning" data-city="Астана" data-aqi="85" />
+                <text x="430" y="140" font-size="12">Астана</text>
+
+                <circle cx="650" cy="120" r="10" class="city-point danger" data-city="Усть-Каменогорск" data-aqi="156" />
+                <text x="600" y="110" font-size="12">Усть-Каменогорск</text>
+            </svg>
+        </div>
+        <div id="aqi-info">Выберите город на карте</div>
+    </div>
+
+    <!-- 2. Счётчик деревьев -->
+    <div class="tree-counter">
+        <div class="tree-icon">🌳</div>
+        <div class="counter-data">
+            <h2 id="tree-number">1 245 680</h2>
+            <p>деревьев высажено в рамках «Таза Қазақстан»</p>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <small>Цель на 2026 год: 2 000 000</small>
+    </div>
+
+</section>
+<script>
+    document.querySelectorAll('.city-point').forEach(point => {
+        point.addEventListener('click', function() {
+            const city = this.getAttribute('data-city');
+            const aqi = this.getAttribute('data-aqi');
+            let status = aqi < 50 ? "Чистый воздух" : aqi < 100 ? "Среднее загрязнение" : "Высокий уровень опасности";
+            
+            document.getElementById('aqi-info').innerHTML = 
+                `🏙 ${city}: <strong>${aqi} AQI</strong> — ${status}`;
+        });
+    });
+
+    // Можно добавить простую анимацию "тикающего" счетчика для красоты
+    let count = 1245680;
+    setInterval(() => {
+        count += Math.floor(Math.random() * 3);
+        document.getElementById('tree-number').innerText = count.toLocaleString();
+    }, 3000);
+</script>
+
+<footer class="footer">
+    &copy; 2026 EcoNews Kazakhstan. Берегите природу!
+</footer>
+
+</body>
+</html>
