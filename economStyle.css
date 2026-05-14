@@ -1,0 +1,130 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --accent: #00ff88;
+    --text-main: #e0e0e0;
+    --text-dim: #b0b0b0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Навигация */
+header {
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(18, 18, 18, 0.8);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span { color: var(--accent); }
+
+nav ul { display: flex; list-style: none; }
+
+nav ul li { margin-left: 20px; }
+
+nav ul li a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover { color: var(--accent); }
+
+/* Главный блок */
+.hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 { font-size: 4rem; margin-bottom: 10px; }
+
+.hero h1 span { color: var(--accent); }
+
+.btn {
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: var(--accent);
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover { transform: translateY(-5px); }
+
+/* Сетка карточек */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 50px 10%;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--accent);
+    transform: scale(1.02);
+}
+
+.card .icon { font-size: 2rem; margin-bottom: 15px; }
+
+.card h3 { color: var(--accent); margin-top: 0; }
+.swiper {
+  width: 100%;
+  max-width: 800px; /* Ограничим ширину для удобства */
+  padding: 50px 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  background: #f4f4f4;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swiper-slide h3 {
+  padding: 15px;
+  margin: 0;
+  font-family: sans-serif;
+  color:#333;
+}
+footer{
+    background-color: #00ff88;
+    text-align: center;
+    color:#333;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 40px;
+}

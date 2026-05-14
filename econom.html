@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экономическая Азбука</title>
+    <link rel="stylesheet" href="economStyle.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Эко<span>Азбука</span></div>
+            <ul>
+                <li><a href="#base">Основы</a></li>
+                <li><a href="#terms">Термины</a></li>
+                <li><a href="#about">О проекте</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Экономика — это <br><span>просто.</span></h1>
+        <p>Разбираемся в сложных финансах на языке здравого смысла.</p>
+        <a href="#terms" class="btn">Начать изучение</a>
+    </section>
+
+    <section id="terms" class="grid-container">
+        <div class="card">
+            <div class="icon">📈</div>
+            <h3>Инфляция</h3>
+            <p>Это когда сегодня на 100 рублей можно купить мешок яблок, а через год — только половину.</p>
+        </div>
+        <div class="card">
+            <div class="icon">🏦</div>
+            <h3>Центробанк</h3>
+            <p>«Главный банк», который следит за порядком в стране и решает, сколько будут стоить кредиты.</p>
+        </div>
+        <div class="card">
+            <div class="icon">💎</div>
+            <h3>Ликвидность</h3>
+            <p>Как быстро ты можешь превратить вещь в реальные деньги. Наличка — супер ликвидная, старый диван — нет.</p>
+        </div>
+    </section>
+    <!-- Подключаем стили Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Оболочка карусели -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <!-- Слайд 1: Что такое Инфляция -->
+    <div class="swiper-slide">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/jWAineywlO8?si=QR3xfvRuBygAy5qT" frameborder="0" allowfullscreen></iframe>
+      <h3>Инфляция за пару минут</h3>
+    </div>
+    <!-- Слайд 2: Про ценные бумаги -->
+    <div class="swiper-slide">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/ymifGLKs-ms?si=i_a_CTkw3OF0a6Rx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3>Акции vs Облигации</h3>
+    </div>
+    <!-- Добавьте столько слайдов, сколько нужно -->
+  </div>
+  <!-- Кнопки навигации -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1, // Сколько видео видно сразу
+    spaceBetween: 30, // Расстояние между ними
+    loop: true,       // Зацикленность
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+<footer>
+    <p>&copy;2026 ЭкоАзбука все права защищены.</p>
+</footer>
+</body>
+</html>
